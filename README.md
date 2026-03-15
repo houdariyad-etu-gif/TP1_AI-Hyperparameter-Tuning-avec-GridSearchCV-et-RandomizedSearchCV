@@ -13,6 +13,12 @@ Ce TP explore l'optimisation des hyperparamètres d'un modèle RandomForest sur 
 4. RandomizedSearchCV
 5. Comparaison des résultats
 
+## Dataset
+- Dataset : Breast Cancer (scikit-learn)
+- Total échantillons : 569
+- Ensemble d'entraînement : 455 échantillons (80%)
+- Ensemble de test : 114 échantillons (20%)
+
 ## Résultats et Comparaison
 
 | Modèle             | Accuracy |
@@ -21,21 +27,13 @@ Ce TP explore l'optimisation des hyperparamètres d'un modèle RandomForest sur 
 | GridSearchCV       | 96.49%   |
 | RandomizedSearchCV | 96.49%   |
 
-Les trois modèles donnent la même accuracy de 96.49%.
-Cela montre que le modèle Baseline avec ses paramètres par défaut
-est déjà très bon sur ce dataset.
+Les trois modèles donnent la même accuracy de 96.49%.Cela montre que le modèle Baseline avec ses paramètres par défaut est déjà très bon sur ce dataset.
 
-GridSearchCV teste TOUTES les combinaisons possibles (405 fits),
-il est exhaustif mais lent. Il est conseillé quand le dataset est
-petit et l'espace de recherche limité.
+GridSearchCV teste TOUTES les combinaisons possibles (405 fits), il est exhaustif mais lent. Il est conseillé quand le dataset est petit et l'espace de recherche limité.
 
-RandomizedSearchCV choisit aléatoirement un nombre limité de
-combinaisons (100 fits), il est plus rapide. Il est conseillé
-quand le dataset est grand ou quand l'espace de recherche
-est très large.
+RandomizedSearchCV choisit aléatoirement un nombre limité de combinaisons (100 fits), il est plus rapide. Il est conseillé quand le dataset est grand ou quand l'espace de recherche est très large.
 
-Les deux méthodes arrivent au même résultat ici, donc sur ce
-dataset RandomizedSearchCV est suffisant et moins coûteux.
+Les deux méthodes arrivent au même résultat ici, donc sur ce dataset RandomizedSearchCV est suffisant et moins coûteux.
 
 ## Libraries utilisées
 - scikit-learn
